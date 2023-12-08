@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Login Page</title>
+</head>
+<head>
+  <title>Login Page</title>
+  <script>
+ 
+    function validateLogin() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+     
+      if (username === "user2" && password === "pass2") {
+      
+      	alert("susccefull")
+      	window.location.assign("stud2.html");
+      }
+      
+      else if (username === "user1" && pasword === "pass1"){
+        alert("susccefull")
+        window.location.assign("stud2.html");
+      }
+      
+      else if (username === "user1" && pasword === "pass1"){
+        alert("susccefull")
+        window.location.assign("stud2.html");
+      }
+      
+      else if (username === "user1" && pasword === "pass1") {
+        alert("susccefull")
+        window.location.assign("stud2.html");
+      }
+      else if (username === "user1" && pasword === "pass1") {
+        alert("susccefull")
+        window.location.assign("stud2.html");
+      }
+      
+      else {
+      	alert("hhgg");
+      }
+    }
+  
+ 
+  </script>
+</head>
+  <body>
+    <div class="container">
+      <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="type student name" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="type password" required>
+
+        <button type="button" onclick="validateLogin()">Login</button>
+        <p>forget password?</p>
