@@ -13,31 +13,37 @@
     function validateLogin() {
       var username = document.getElementById("username").value;
       var password = document.getElementById("password").value;
-     
-      if (username === "jyoti" && password === "19012007") {
       
-      	alert("susccefull")
-      	window.location.assign("stud2.html");
-      }
-      
-      else if (username === "somya" && pasword === "09012007"){
-        alert("susccefull")
-        window.location.assign("somya.html");
-      }
-      
-      else {
-      	alert("hhgg");
-      }
+   
+        if (username === "" && password === "pass2") {
+            alert("susccefull")
+            window.location.assign("stud2.html");
+          }
+          
+          else if (username === "user1" && password === "pass1"){
+            alert("susccefull")
+            window.location.assign("stud1.html");
+          }
+          
+           else if (username === "user1" && password === "pass1"){
+            alert("susccefull")
+            window.location.assign("stud1.html");
+          }
+          else {
+            alert("incorrect information");
+          }
     }
-  
+    </script>
+</body>
+</html>
  
   </script>
 </head>
   <body>
-    <div class="container">
+    <div class="containe">
       <form id="loginForm">
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" placeholder="type student name" required>
+        <input type="text" id="username" name="username" placeholder="type student first 4 letter" required>
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" placeholder="type password" required>
 
