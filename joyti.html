@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Resume</title>
+    <style>
+      
+     body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+}
+        h1, {
+            color: #333;
+                text-align: center;
+                font-size: 20px;
+                margin-bottom: 10px;
+        }
+        h2 {
+          color: #333;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+.container {
+    width: 25em;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+table.marksheet {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+th {
+    text-align: left;
+}
+
+#total-marks {
+    font-weight: bold;
+}
+li::before {
+  content: "\2022";
+  /* Use a bullet point for each list item */
+  color: #4CAF50;
+  /* Set bullet point color */
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+    </style>
+    <script>
+           // Calculate and display grades based on marks
+      
+      const marks = {
+          english: 85,
+          math: 92,
+          science: 78,
+          social: 80
+      };
+      
+      function calculateGrade(mark) {
+          if (mark >= 90) return "A+";
+          if (mark >= 80) return "A";
+          if (mark >= 70) return "B";
+          if (mark >= 60) return "C";
+          return "D";
+      }
+      
+      // Update UI with calculated values
+      
+      const totalMarks = Object.values(marks).reduce((acc, mark) => acc + mark, 0);
+      
+      document.getElementById("english-marks").textContent = marks.english;
+      document.getElementById("math-marks").textContent = marks.math;
+      document.getElementById("science-marks").textContent = marks.science;
+      document.getElementById("social-marks").textContent = marks.social;
+      document.getElementById("total-marks").textContent = totalMarks;
+      
+      document.getElementById("english-grade").textContent = calculateGrade(marks.english);
+      document.getElementById("math-grade").textContent = calculateGrade(marks.math);
+      document.getElementById("science-grade").textContent = calculateGrade(marks.science);
+      document.getElementById("social-grade").textContent = calculateGrade(marks.social);
+    </script>
+</head>
+<body>
+      <header>
+      <img src="/doc/joyti doc/Joyti photo.jpg" alt="joyti" style="width: 10em ;">
+        <h1>joyti ranjan barik</h1>
+    </header>
+    <br>
+   
+    <section>
+      <br>
+        <h2>CERTIFICATE</h2>
+    <hr> 
+    <div>
+      <a href="/doc/joyti doc/joyti inc.jpg"><img src="/doc/joyti doc/joyti inc.jpg" alt="/doc/joyti doc/joyti inc.jpg" style="width: 15em" ></a>
+      <a href="/doc/joyti doc/joyti inc.jpg" download  ><h3>cast certificate</h3></a>
+    </div>
+    
+    <div>
+      <a href="/doc/joyti doc/joyti adha.jpg"><img src="/doc/joyti doc/joyti adha.jpg" alt="/doc/joyti doc/joyti adha.jpg"style="width: 15em"  ></a>
+      <a href="/doc/joyti doc/joyti adha.jpg" download><h3>adhar</h3></a>
+    </div>
+    
+    <div>
+      <a href="/doc/joyti doc/joyti im.jpg"><img src="/doc/joyti doc/joyti im.jpg" alt="/doc/joyti doc/joyti im.jpg" style="width: 15em"></a>
+      <a href="/doc/joyti doc/joyti im.jpg" download><h3>imigration</h3></a>
+    </div>
+    
+    <div>
+      <a href="/doc/joyti doc/joyti inc.jpg"><img src="/doc/joyti doc/joyti inc.jpg" alt="/doc/joyti doc/joyti inc.jpg" style="width: 15em"></a>
+      <a href="/doc/joyti doc/joyti inc.jpg" download><h3>income certificate</h3></a>
+    </div>
+    
+    <div>
+      <a href="/doc/joyti doc/joyti bank.jpg"><img src="/doc/joyti doc/joyti bank.jpg" alt="/doc/joyti doc/joyti bank.jpg" style="width: 15em"></a>
+      <a href="/doc/joyti doc/joyti bank.jpg" download><h3>bank details</h3></a>
+    </div>
+     <section>
+      <br>
+        <h2>ACADEMY MARK AND RESULT</h2>
+<hr>    
+
+  <div class="container">
+    <h1>SEM-1</h1>
+    <hr>
+    <table class="marksheet">
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Marks</th>
+          <th>Grade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>English</td>
+          <td><span id="english-marks">85</span></td>
+          <td><span id="english-grade">A</span></td>
+        </tr>
+        <tr>
+          <td>Mathematics</td>
+          <td><span id="math-marks">92</span></td>
+          <td><span id="math-grade">A+</span></td>
+        </tr>
+        <tr>
+          <td>Science</td>
+          <td><span id="science-marks">78</span></td>
+          <td><span id="science-grade">B+</span></td>
+        </tr>
+        <tr>
+          <td>Social Studies</td>
+          <td><span id="social-marks">80</span></td>
+          <td><span id="social-grade">B</span></td>
+        </tr>
+        <tr>
+          <td>Total</td>
+          <td><span id="total-marks">335</span></td>
+          <td>&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<br>
+ <div class="container">
+    <h1>SEM-2</h1>
+    <hr>
+    <table class="marksheet">
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Marks</th>
+          <th>Grade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>English</td>
+          <td><span id="english-marks">65</span></td>
+          <td><span id="english-grade">A</span></td>
+        </tr>
+        <tr>
+          <td>Mathematics</td>
+          <td><span id="math-marks">92</span></td>
+          <td><span id="math-grade">A+</span></td>
+        </tr>
+        <tr>
+          <td>Science</td>
+          <td><span id="science-marks">78</span></td>
+          <td><span id="science-grade">B+</span></td>
+        </tr>
+        <tr>
+          <td>Social Studies</td>
+          <td><span id="social-marks">80</span></td>
+          <td><span id="social-grade">B</span></td>
+        </tr>
+        <tr>
+          <td>Total</td>
+          <td><span id="total-marks">335</span></td>
+          <td>&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+    </section>
+
+    </section>
+    <section>
+      <br>
+        <h2>CONTACT INFO</h2>
+        <hr>
+    </section>
+</body>
+</html>
